@@ -8,3 +8,8 @@ end
 get '/customer' do
   "customer - codeops"
 end
+
+
+get '/api/v1/auth' do
+  "api auth"
+end
