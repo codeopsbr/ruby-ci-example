@@ -1,0 +1,1 @@
+FROM mateusprado/sinatra-alpine
