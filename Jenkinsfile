@@ -24,6 +24,7 @@ pipeline {
     stage('Deploy') {
       steps {
         sh 'echo "fazendo deploy"'
+        sh 'docker run -d -p 4567:4567 ruby-ci-example'
       }
     }
   }
