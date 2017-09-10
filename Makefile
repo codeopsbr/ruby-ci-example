@@ -1,5 +1,4 @@
 all:
-	docker rm -f ruby-ci-interdevops
 	docker build -t ruby-ci-interdevops:latest .
 
 test:
