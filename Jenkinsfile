@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh ''''docker stop $(docker ps -q)'
+        sh '''docker stop --name ruby-ci-example
 docker build -t ruby-ci-example .'''
       }
     }
@@ -25,7 +25,7 @@ docker build -t ruby-ci-example .'''
     stage('Deploy') {
       steps {
         sh 'echo "fazendo deploy"'
-        sh 'docker run -d -p 4567:4567 ruby-ci-example'
+        sh 'docker run --rm --name ruby-ci-example -d -p 4567:4567 ruby-ci-example'
       }
     }
   }
