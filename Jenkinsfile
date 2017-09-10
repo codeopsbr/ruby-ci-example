@@ -6,6 +6,11 @@ pipeline {
         sh 'ls -l'
       }
     }
+    stage('Upload to repo') {
+      steps {
+        sh 'hostname'
+      }
+    }
     stage('Tests') {
       steps {
         sleep 5
@@ -13,7 +18,7 @@ pipeline {
     }
     stage('Aproval') {
       steps {
-        input 'Você aprova para deploy?'
+        input 'Voce aprova para deploy?'
       }
     }
     stage('Deploy') {
