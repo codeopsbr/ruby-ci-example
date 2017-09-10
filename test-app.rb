@@ -14,7 +14,7 @@ class HelloWorldTest < Test::Unit::TestCase
   def test_home_page
     get '/'
     assert last_response.ok?
-    assert_equal 'codeops', last_response.body
+    assert_equal 'codeops v2 NG fucker+', last_response.body
   end
 
 end
