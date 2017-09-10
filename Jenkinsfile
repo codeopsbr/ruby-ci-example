@@ -4,6 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'docker build -t ruby-ci-example .'
+        sh 'bundle install'
       }
     }
     stage('Upload to repo') {
@@ -13,7 +14,7 @@ pipeline {
     }
     stage('Tests') {
       steps {
-        sleep 5
+        sh 'ruby test-app.rb'
       }
     }
     stage('Aproval') {
