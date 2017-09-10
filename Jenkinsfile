@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t ruby-ci-example .'
+        sh 'scl enable rh-ruby22 bash'
         sh 'bundle install'
       }
     }
