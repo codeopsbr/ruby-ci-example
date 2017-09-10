@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'bundle install'
+        sh '''ruby -v
+gem list'''
       }
     }
     stage('Upload to repo') {
