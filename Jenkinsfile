@@ -11,14 +11,14 @@ pipeline {
         sh 'make test'
       }
     }
+    stage('Aprovacao') {
+      steps {
+        input 'Voce aprova?'
+      }
+    }
     stage('Deploy') {
       steps {
         sh 'make publish'
-      }
-    }
-    stage('approval') {
-      steps {
-        input 'Voce aprova?'
       }
     }
   }
