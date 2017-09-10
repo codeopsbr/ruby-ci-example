@@ -1,14 +1,12 @@
 require 'sinatra'
 
 get '/' do
-  "codeops"
+  "codeops v2 NG fucker+"
 end
-
 
 get '/customer' do
   "customer - codeops"
 end
-
 
 get '/api/v1/auth' do
   "api auth"
