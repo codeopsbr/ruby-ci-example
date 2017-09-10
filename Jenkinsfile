@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''docker stop ruby-ci-example
-docker build -t ruby-ci-example .'''
+        sh 'env'
       }
     }
     stage('Upload to repo') {
