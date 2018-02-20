@@ -12,9 +12,14 @@ pipeline {
         echo 'Estou testando'
       }
     }
-    stage('Aprovação') {
+    stage('AprovaÃ§Ã£o') {
       steps {
         input 'Voce aprova?'
+      }
+    }
+    stage('Publish') {
+      steps {
+        sh 'echo "publicando no registry"'
       }
     }
   }
