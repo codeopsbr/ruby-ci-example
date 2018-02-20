@@ -11,6 +11,7 @@ pipeline {
       steps {
         sh 'pwd'
         sh 'ls -l'
+        sh 'bundle install'
       }
     }
     stage('Test') {
