@@ -23,9 +23,14 @@ pipeline {
         input 'Voce aprova?'
       }
     }
+    stage('Clean up') {
+      steps {
+        sh 'docker stop $(docker ps -q)'
+      }
+    }
     stage('Publish') {
       steps {
-        sh 'echo "publicando no registry"'
+        echo 'Realizando o publish da imagem'
       }
     }
   }
