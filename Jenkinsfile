@@ -15,7 +15,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-        echo 'Estou testando'
+        sh 'docker run -d -p 4567:4567 codeopsbr/ruby-ci-example'
       }
     }
     stage('Aprovação') {
