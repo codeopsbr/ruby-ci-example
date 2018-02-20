@@ -15,6 +15,7 @@ pipeline {
     }
     stage('Test') {
       steps {
+        sh 'ruby test-app.rb'
         sh 'docker run -d -p 4567:4567 codeopsbr/ruby-ci-example'
       }
     }
