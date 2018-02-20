@@ -4,6 +4,7 @@ pipeline {
     stage('Pre-build') {
       steps {
         sh 'pwd'
+        fileExists 'Gemfile'
       }
     }
     stage('Build') {
