@@ -3,14 +3,14 @@ pipeline {
   stages {
     stage('Pre-build') {
       steps {
-        sh 'pwd'
         fileExists 'Gemfile'
+        fileExists 'Dockerfile'
+        sh 'docker info'
       }
     }
     stage('Build') {
       steps {
-        sh 'pwd'
-        sh 'ls -l'
+        sh 'docker build -t codeopsbr/ruby-ci-example .'
       }
     }
     stage('Test') {
