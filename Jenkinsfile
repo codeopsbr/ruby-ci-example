@@ -12,5 +12,10 @@ pipeline {
         echo 'Estou testando'
       }
     }
+    stage('Aprovação') {
+      steps {
+        input 'Voce aprova?'
+      }
+    }
   }
 }
