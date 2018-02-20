@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    tage('Pre-build') {
+    stage('Pre-build') {
       steps {
         sh 'pwd'
       }
