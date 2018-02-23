@@ -16,6 +16,6 @@ get '/api/doc' do
   "api doc"
 end
 
-get '/user' do
-  "listing all users"
+get '/users' do
+  "show users"
 end

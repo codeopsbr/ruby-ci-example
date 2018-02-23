@@ -17,4 +17,10 @@ class HelloWorldTest < Test::Unit::TestCase
     assert_equal 'codeops v2 NG fucker+', last_response.body
   end
 
+  def test_user_page
+    get '/users'
+    assert last_response.ok?
+    assert_equal 'show users', last_response.body
+  end
+
 end
