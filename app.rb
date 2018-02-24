@@ -1,7 +1,7 @@
 require 'sinatra'
 
 get '/' do
-  "codeops v2 NG fucker+"
+  "codeops v2 NG fucker+ "
 end
 
 get '/customer' do
@@ -18,4 +18,8 @@ end
 
 get '/users' do
   "show users"
+end
+
+get '/api/version' do
+  "1.0.3"
 end
