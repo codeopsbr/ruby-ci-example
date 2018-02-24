@@ -21,5 +21,5 @@ get '/users' do
 end
 
 get '/api/version' do
-  "1.0.3"
+  "1.0.4"
 end
