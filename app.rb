@@ -21,5 +21,9 @@ get '/users' do
 end
 
 get '/api/version' do
-  "1.0.6"
+  "1.0.7"
+end
+
+get '/api/hostname' do
+  Socket.gethostname
 end
