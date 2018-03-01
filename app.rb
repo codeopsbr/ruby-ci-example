@@ -21,7 +21,7 @@ get '/users' do
 end
 
 get '/api/version' do
-  "1.0.7"
+  "1.1.7"
 end
 
 get '/api/hostname' do
